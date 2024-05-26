@@ -7,6 +7,9 @@ from sklearn.metrics import accuracy_score, classification_report
 from filter_aflite import filter
 import numpy as np
 
+# test on the available csv files under the data directory
+# It's assumed that problem is a classification one
+
 def train_filtered(add,encode):
     # Load the dataset
     address = add
@@ -47,7 +50,7 @@ def train_unfiltered(add,encode):
     average_accuracy = np.mean(scores)
     print(f'Accuracy Unfiltered: {average_accuracy:.2f}')
 
-encode  = True
+encode  = True # True if the target column isn't encoded numerically. False if it is
 address = 'data/rice_cammeo.csv'
 train_unfiltered(address,encode)
 train_filtered(address,encode)

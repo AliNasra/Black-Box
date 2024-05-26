@@ -4,6 +4,8 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
 from filter_aflite import filter
 
+# Use this script to run the code on datasets split into males and females
+# It's assumed that problem is a classification one
 
 def no_filtering(f1,f2):
     # Load your dataset
@@ -65,9 +67,9 @@ def filtering(f1,f2):
     print(f'Accuracy Female Prediction: {accuracy}')
 
 
-f1            = "Cardio/males.csv"
-f2            = "Cardio/females.csv"
-filter_choice = True
+f1            = "data/Health/males.csv"
+f2            = "data/Health/females.csv"
+filter_choice = True  # True to apply the filter, False to disregard the filter
 if filter_choice:
     filtering(f1,f2)
 else:
