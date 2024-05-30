@@ -18,8 +18,8 @@ def no_filtering(f1,f2):
     # Split the data into features and target
     X_male = data_male.drop(last_column_name, axis=1)  # Replace 'target_column' with the name of your target column
     y_male = data_male[last_column_name]
-    X_female = data_male.drop(last_column_name, axis=1)  # Replace 'target_column' with the name of your target column
-    y_female = data_male[last_column_name]
+    X_female = data_female.drop(last_column_name, axis=1)  # Replace 'target_column' with the name of your target column
+    y_female = data_female[last_column_name]
 
     # Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X_male, y_male, test_size=0.2, random_state=42)
@@ -47,8 +47,8 @@ def filtering(f1,f2):
     # Split the data into features and target
     X_male = data_male.drop(last_column_name, axis=1)  # Replace 'target_column' with the name of your target column
     y_male = data_male[last_column_name]
-    X_female = data_male.drop(last_column_name, axis=1)  # Replace 'target_column' with the name of your target column
-    y_female = data_male[last_column_name]
+    X_female = data_female.drop(last_column_name, axis=1)  # Replace 'target_column' with the name of your target column
+    y_female = data_female[last_column_name]
 
     # Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X_male, y_male, test_size=0.2, random_state=42)
