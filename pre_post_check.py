@@ -41,6 +41,7 @@ def no_filtering(f1,f2):
 def filtering(f1,f2):
     # Load your dataset
     data_male        = filter(f1)
+    data_male        = data_male.drop("id", axis=1)
     data_female      = pd.read_csv(f2)
     last_column_name = data_female.columns[-1]
 
